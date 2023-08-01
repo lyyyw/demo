@@ -8,7 +8,7 @@ public class PrintIn {
     private static final AtomicInteger a = new AtomicInteger();
     private final static int MAX = 100;
     private static Semaphore semaphoreA = new Semaphore(1);
-    private static Semaphore semaphoreB = new Semaphore(1);
+    private static Semaphore semaphoreB = new Semaphore(0);
     public static void main(String[] args) {
         Thread a = new Thread(() -> {
             for (int i = 0; i < 50; i++) {
